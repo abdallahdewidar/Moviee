@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 selectedIndex = index;
               });
             },
-            items: [
+            items: const [
               BottomNavigationBarItem(
                   backgroundColor:Color(0xff514F4F) ,
                   icon: ImageIcon(

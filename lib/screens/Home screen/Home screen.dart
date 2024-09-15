@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:movieeapp/screens/tabs%20screen/Browse.dart';
 import 'package:movieeapp/screens/tabs%20screen/Home.dart';
 import 'package:movieeapp/screens/tabs%20screen/search.dart';
@@ -40,30 +41,25 @@ class _HomeScreenState extends State<HomeScreen> {
             items: [
               BottomNavigationBarItem(
                   backgroundColor:Color(0xff514F4F) ,
-                  icon: ImageIcon(
-                    AssetImage("assets/images/Home.svg"),
-                  ),
+                  icon: SvgPicture.asset("assets/images/Home icon.svg") ,
+
                   label: "Home"
               ),
               BottomNavigationBarItem(
                   backgroundColor:Color(0xff514F4F)  ,
-                  icon: ImageIcon(
-                    AssetImage("assets/images/SEARCH.svg"),
-                  ),
+                  icon: SvgPicture.asset("assets/images/search-2 (1).svg"),
+
                   label: "Search"
               ),
               BottomNavigationBarItem(
                   backgroundColor:Color(0xff514F4F)  ,
-                  icon: ImageIcon(
-                    AssetImage("assets/images/Browse.svg"),
-                  ),
+                  icon: SvgPicture.asset
+                   ("assets/images/Icon material-movie.svg"),
                   label: "Browse"
               ),
               BottomNavigationBarItem(
                   backgroundColor:Color(0xff514F4F)  ,
-                  icon: ImageIcon(
-                    AssetImage("assets/images/Watchlist.svg"),
-                  ),
+                  icon: SvgPicture.asset("assets/images/Icon ionic-md-bookmarks.svg"),
                   label: "Watchlist"
               ),
 

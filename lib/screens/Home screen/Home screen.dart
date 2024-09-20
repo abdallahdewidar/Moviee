@@ -18,7 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
   int selectedIndex = 0;
   List<Widget> Screen = [
     Home(),
-    search(),
+    Search(),
     Browse(),
     Watchlist(),
 
@@ -38,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 selectedIndex = index;
               });
             },
-            items: const [
+            items: [
               BottomNavigationBarItem(
                   backgroundColor:Color(0xff514F4F) ,
                   icon: SvgPicture.asset("assets/images/Home icon.svg") ,

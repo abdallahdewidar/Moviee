@@ -1,36 +1,31 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import '../BrowserCategory/Categories.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:movieeapp/screens/BrowserCategory/CategoriesListView.dart';
 
 class Browse extends StatelessWidget {
-   Browse({Key? key}) : super(key: key);
-  List<String>images=[
-    "assets/images/png-clipart-movie-genres-folders-hannah-folder-icon-thumbnail.png",
-    "assets/images/png-clipart-movie-genres-folders-hannah-folder-icon-thumbnail.png",
-    "assets/images/png-clipart-movie-genres-folders-hannah-folder-icon-thumbnail.png",
-    "assets/images/png-clipart-movie-genres-folders-hannah-folder-icon-thumbnail.png",
-    "assets/images/png-clipart-movie-genres-folders-hannah-folder-icon-thumbnail.png",
-  ];
+   const Browse({super.key});
+
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text("Browser Category",
-          style: Theme.of(context).textTheme.titleMedium,),
-          Expanded(
-            child: GridView.builder(
-              itemCount:images.length ,
-                gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-                itemBuilder: (context, index) {
-                  return Categories();
-                },),
-          )
-        ],
+    return SafeArea(
+      child: Scaffold(
+        body: Padding(
+          padding: REdgeInsets.all(8.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(height: 20.h),
+              Padding(
+                padding: REdgeInsets.all(15.0),
+                child: Text("Browser Category",
+                style: Theme.of(context).textTheme.titleMedium,),
+              ),
+              SizedBox(height: 20.h),
+             CategoriesListView()
+            ],
+          ),
+        ),
       ),
     );
   }

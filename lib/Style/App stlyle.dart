@@ -9,8 +9,8 @@ class Appstyle{
   static ThemeData Theme= ThemeData(
     textTheme: const TextTheme(
       titleMedium: TextStyle(
-        fontSize: 22,
-        fontWeight: FontWeight.w400,
+        fontSize: 35,
+        fontWeight: FontWeight.bold,
         color: Colors.white
       )
     ),

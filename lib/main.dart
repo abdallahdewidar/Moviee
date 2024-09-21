@@ -19,23 +19,20 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       designSize: const Size(412, 892),
       builder: (context, child) {
-        return MaterialApp(
+        return  MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: child,
+          title: 'Flutter Demo',
+          theme:Appstyle.Theme,
+          routes:{
+            HomeScreen.routename:(_)=>HomeScreen(),
+            CategoryList.routeName:(_)=>CategoryList()
+          }
+          ,
+          initialRoute: HomeScreen.routename,
+          // NewsDetials.routeName
         );
       },
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
-        theme:Appstyle.Theme,
-        routes:{
-          HomeScreen.routename:(_)=>HomeScreen(),
-          CategoryList.routeName:(_)=>CategoryList()
-        }
-        ,
-        initialRoute: HomeScreen.routename,
-        // NewsDetials.routeName
-      ),
+
     );
 
   }

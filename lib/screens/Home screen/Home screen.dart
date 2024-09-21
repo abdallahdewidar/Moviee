@@ -18,7 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
   int selectedIndex = 0;
   List<Widget> Screen = [
     Home(),
-    search(),
+    Search(),
     Browse(),
     Watchlist(),
 

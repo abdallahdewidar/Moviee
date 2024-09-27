@@ -15,6 +15,7 @@
 
 class Result {
   Result({
+    this.isWatched,
       this.adult, 
       this.backdropPath, 
       this.genreIds, 
@@ -31,6 +32,7 @@ class Result {
       this.voteCount,});
 
   Result.fromJson(dynamic json) {
+    isWatched = json['isWatched'];
     adult = json['adult'];
     backdropPath = json['backdrop_path'];
     genreIds = json['genre_ids'] != null ? json['genre_ids'].cast<num>() : [];
@@ -46,6 +48,7 @@ class Result {
     voteAverage = json['vote_average'];
     voteCount = json['vote_count'];
   }
+  bool? isWatched ;
   bool? adult;
   String? backdropPath;
   List<num>? genreIds;
@@ -63,6 +66,7 @@ class Result {
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
+    map['isWatched'] = isWatched;
     map['adult'] = adult;
     map['backdrop_path'] = backdropPath;
     map['genre_ids'] = genreIds;

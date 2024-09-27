@@ -47,7 +47,7 @@ class _RecommendedListState extends State<RecommendedList> {
                          ),// Image.asset
                    ), // Container
                    ),
-                                              GestureDetector(child: SvgPicture.asset(widget.movies[index].isWatched??false?'assets/watched_mark.svg':'assets/unwatched_mark.svg'),onTap: (){setState((){widget.movies[index].isWatched=!widget.movies[index].isWatched!;});},),
+                                              GestureDetector(child: SvgPicture.asset(widget.movies[index].isWatched??false?'assets/images/watched_mark.svg':'assets/images/unwatched_mark.svg'),onTap: (){setState((){widget.movies[index].isWatched=!widget.movies[index].isWatched!;});},),
 
                  ],
                ),

@@ -2,8 +2,10 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:movieeapp/Style/App%20stlyle.dart';
+import 'package:movieeapp/firebase_options.dart';
 import 'package:movieeapp/screens/BrowserCategory/CategoryList.dart';
 import 'package:movieeapp/screens/Home%20screen/Home%20screen.dart';
+
 void main()async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(

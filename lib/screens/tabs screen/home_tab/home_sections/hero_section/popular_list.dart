@@ -22,10 +22,11 @@ class _PopularMoviesItemState extends State<PopularMoviesItem> {
           height: 289.h,
           viewportFraction: 1,
           padEnds: false,
-          animateToClosest: false,disableCenter: true,enlargeStrategy: CenterPageEnlargeStrategy.height,aspectRatio: 217/412,enlargeCenterPage: false,
-        
-
-         
+          animateToClosest: false,
+          disableCenter: true,
+          enlargeStrategy: CenterPageEnlargeStrategy.height,
+          aspectRatio: 217 / 412,
+          enlargeCenterPage: false,
         ),
         itemCount: widget.movies.length,
         itemBuilder: (BuildContext context, int itemIndex, int pageViewIndex) {
@@ -42,16 +43,17 @@ class _PopularMoviesItemState extends State<PopularMoviesItem> {
                   width: double.infinity,
                   fit: BoxFit.fill,
                 ),
-                Positioned(bottom: 0,
+                Positioned(
+                  bottom: 0,
                   left: 21.w,
-                  child: Image.network(  width: 130.w,
+                  child: Image.network(
+                    width: 130.w,
                     height: 200.h,
                     'https://image.tmdb.org/t/p/w500${widget.movies[itemIndex].posterPath}',
-                  
                   ),
-                  
                 ),
-                Positioned(bottom: 40.h,
+                Positioned(
+                  bottom: 40.h,
                   left: 160.w,
                   child: Text(
                     widget.movies[itemIndex].originalTitle ?? '',
@@ -60,31 +62,34 @@ class _PopularMoviesItemState extends State<PopularMoviesItem> {
                         fontSize: 14.sp,
                         fontWeight: FontWeight.w400),
                   ),
-                  
                 ),
-                Positioned(   bottom: 25.h,
+                Positioned(
+                  bottom: 25.h,
                   left: 160.w,
                   child: Text("2019  PG-13  2h 7m",
                       style: GoogleFonts.inter(
                           color: Color(0xffB5B4B4),
                           fontSize: 10.sp,
                           fontWeight: FontWeight.w400)),
-               
                 ),
-                Positioned(bottom:                      160.h
-,left: 21.w,
+                Positioned(
+                    bottom: 160.h,
+                    left: 21.w,
                     child: GestureDetector(
-                  child: SvgPicture.asset(
-                      widget.movies[itemIndex].isWatched ?? false
-                          ? 'assets/watched_mark.svg'
-                          : 'assets/unwatched_mark.svg',width: 27.w,height: 36.h,),
-                  onTap: () {
-                    setState(() {
-                      widget.movies[itemIndex].isWatched =
-                          !widget.movies[itemIndex].isWatched!;
-                    });
-                  },
-                )),
+                      child: SvgPicture.asset(
+                        widget.movies[itemIndex].isWatched ?? false
+                            ? 'assets/images/watched_mark.svg'
+                            : 'assets/images/unwatched_mark.svg',
+                        width: 27.w,
+                        height: 36.h,
+                      ),
+                      onTap: () {
+                        setState(() {
+                          widget.movies[itemIndex].isWatched =
+                              !widget.movies[itemIndex].isWatched!;
+                        });
+                      },
+                    )),
               ],
             ),
           );

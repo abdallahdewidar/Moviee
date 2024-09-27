@@ -10,7 +10,8 @@ class Watchlist extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Watch List")),
+      appBar: AppBar(title: Text("Watch List")
+      ,backgroundColor: Color(0xff514F4F) ,),
       body: StreamBuilder<List<Movie>>(
         stream: getMovies(),
         builder: (context, snapshot) {

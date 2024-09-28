@@ -4,7 +4,8 @@ import 'package:movieeapp/screens/tabs%20screen/Browse.dart';
 import 'package:movieeapp/screens/tabs%20screen/Home.dart';
 import 'package:movieeapp/screens/tabs%20screen/search.dart';
 
-import '../tabs screen/wishlist.dart';
+import '../../screens/tabs screen/wishlist.dart';
+
 
 class HomeScreen extends StatefulWidget {
   static const String routename = "Home";

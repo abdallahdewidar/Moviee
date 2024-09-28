@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:movieeapp/Core/CategoryList/CategoryListResponse.dart';
 import 'package:movieeapp/Core/MoviesCategory/MoviesCategoriesResponse.dart';
+import 'package:movieeapp/Core/simsir%20response/simir%20response.dart';
 
 class ApiManager {
   static const String apiKey = "64cafca5c6a014721825b917540c92f1";
@@ -25,5 +26,16 @@ class ApiManager {
     var json =jsonDecode(response.body);
     CategoryListResponse listResponse = CategoryListResponse.fromJson(json);
     return listResponse;
+  }
+  static Future<SimilarResponse> similrmovies(int MovieId) async {
+    Uri similrUrl = Uri.https(
+        baseUrl, "/3/discover/movie", {
+      "api_key": apiKey,
+
+    });
+    http.Response response = await http.get(similrUrl);
+    var json = jsonDecode(response.body);
+    SimilarResponse similarResponse = SimilarResponse.fromJson(json);
+    return similarResponse;
   }
 }

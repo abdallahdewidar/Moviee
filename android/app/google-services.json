@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "790814369753",
+    "project_id": "movissapp-a10e2",
+    "storage_bucket": "movissapp-a10e2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:790814369753:android:78aec8081809587cc69bc8",
+        "android_client_info": {
+          "package_name": "com.example.movieeapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDprutLs9WJXt0uTL4v4E829RxCnE53b9w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

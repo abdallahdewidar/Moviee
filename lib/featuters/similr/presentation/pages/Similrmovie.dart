@@ -25,13 +25,14 @@ class SimilarMoviesPage extends StatelessWidget {
             if (state is Similrleodiongstate) {
               return Center(child: CircularProgressIndicator());
             } else if (state is Similrsucsussstate) {
-              final similarMovies = Similrsucsussstate(Similrrepo: SimilarResponse()); // Assuming similarResponse contains a list of movies
+              final similarMovies = state.Similrrepo.results; // Assuming similarResponse contains a list of movies
+
                 return ListView.builder(
-                  itemCount: similarMovies.length,
+                  itemCount: similarMovies?.length??0,
                   itemBuilder: (context, index) {
-                    final movie = similarMovies[index];
+                    final movie = similarMovies![index];
                     return ListTile(
-                      title: Text(movie.title),
+                      title: Text(movie.title??""),
                       onTap: () {
                         // Navigate to the movie details page with the movie ID
                       },

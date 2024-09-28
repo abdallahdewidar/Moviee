@@ -25,8 +25,19 @@ class SimilarMoviesPage extends StatelessWidget {
             if (state is Similrleodiongstate) {
               return Center(child: CircularProgressIndicator());
             } else if (state is Similrsucsussstate) {
-              final similarMovies = state.Similrsucsussstate.; // Assuming similarResponse contains a list of movies
-              return SimilarResponse(similarMovies:Result() );
+              final similarMovies = Similrsucsussstate(Similrrepo: SimilarResponse()); // Assuming similarResponse contains a list of movies
+                return ListView.builder(
+                  itemCount: similarMovies.length,
+                  itemBuilder: (context, index) {
+                    final movie = similarMovies[index];
+                    return ListTile(
+                      title: Text(movie.title),
+                      onTap: () {
+                        // Navigate to the movie details page with the movie ID
+                      },
+                    );
+                  },
+                );
             } else if (state is Similrerrorstate) {
               return Center(child: Text('Error: ${state.error}'));
             } else {

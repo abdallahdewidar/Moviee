@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:movieeapp/screens/tabs%20screen/Browse.dart';
-import 'package:movieeapp/screens/tabs%20screen/Home.dart';
+import 'package:movieeapp/screens/tabs%20screen/home_tab/Home.dart';
 import 'package:movieeapp/screens/tabs%20screen/search.dart';
 
 import '../../screens/tabs screen/wishlist.dart';

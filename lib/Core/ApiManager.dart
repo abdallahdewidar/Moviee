@@ -5,6 +5,7 @@ import 'package:movieeapp/Core/MoviesCategory/MoviesCategoriesResponse.dart';
 import 'package:movieeapp/Core/models/new_relases/Upcomming.dart';
 import 'package:movieeapp/Core/models/popular/Popular.dart';
 import 'package:movieeapp/Core/models/recomended_movies/Recomended.dart';
+import 'package:movieeapp/Core/simsir%20response/simir%20response.dart';
 
 class ApiManager {
   static const String apiKey = "64cafca5c6a014721825b917540c92f1";
@@ -61,4 +62,15 @@ var jsonBody = jsonDecode(response.body);
     } catch (error) {
       throw Exception('Error fetching sources: $error');
     }}
+  static Future<SimilarResponse> similrmovies(int MovieId) async {
+    Uri similrUrl = Uri.https(
+        baseUrl, "/3/discover/movie", {
+      "api_key": apiKey,
+
+    });
+    http.Response response = await http.get(similrUrl);
+    var json = jsonDecode(response.body);
+    SimilarResponse similarResponse = SimilarResponse.fromJson(json);
+    return similarResponse;
+  }
 }
